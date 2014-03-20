@@ -1,15 +1,15 @@
 //
-//  CTAppDelegate.m
+//  SGAppDelegate.m
 //  Saga
 //
 //  Created by Julien on 06/03/2014.
 //  Copyright (c) 2014 cottonTracks. All rights reserved.
 //
 
-#import "CTAppDelegate.h"
+#import "SGAppDelegate.h"
 #import <Parse/Parse.h>
 
-@implementation CTAppDelegate
+@implementation SGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

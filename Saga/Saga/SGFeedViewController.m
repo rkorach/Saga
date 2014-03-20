@@ -1,18 +1,18 @@
 //
-//  CTFeedViewController.m
+//  SGFeedViewController.m
 //  Saga
 //
 //  Created by Julien on 09/03/2014.
 //  Copyright (c) 2014 cottonTracks. All rights reserved.
 //
 
-#import "CTFeedViewController.h"
+#import "SGFeedViewController.h"
 
-@interface CTFeedViewController ()
+@interface SGFeedViewController ()
 
 @end
 
-@implementation CTFeedViewController
+@implementation SGFeedViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

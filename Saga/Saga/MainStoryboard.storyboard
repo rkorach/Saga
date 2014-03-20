@@ -7,7 +7,7 @@
         <!--Feed View Controller-->
         <scene sceneID="U0K-fW-M1a">
             <objects>
-                <viewController id="5sV-bv-tFk" customClass="CTFeedViewController" sceneMemberID="viewController">
+                <viewController id="5sV-bv-tFk" customClass="SGFeedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XPF-kG-Y6T"/>
                         <viewControllerLayoutGuide type="bottom" id="La4-Eb-qt9"/>

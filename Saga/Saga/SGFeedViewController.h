@@ -1,5 +1,5 @@
 //
-//  CTFeedViewController.h
+//  SGFeedViewController.h
 //  Saga
 //
 //  Created by Julien on 09/03/2014.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTFeedViewController : UIViewController
+@interface SGFeedViewController : UIViewController
 
 -(UIStatusBarStyle)preferredStatusBarStyle;
 

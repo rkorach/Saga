@@ -1,5 +1,5 @@
 //
-//  CTAppDelegate.h
+//  SGAppDelegate.h
 //  Saga
 //
 //  Created by Julien on 06/03/2014.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
