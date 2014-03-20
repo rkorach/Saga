@@ -16,6 +16,8 @@
 		F934367D18C9D155003415AA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934367C18C9D155003415AA /* Security.framework */; };
 		F934367F18C9D15E003415AA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934367E18C9D15E003415AA /* StoreKit.framework */; };
 		F934368118C9D16D003415AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934368018C9D16D003415AA /* SystemConfiguration.framework */; };
+		F934368418CC8B69003415AA /* CTFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F934368318CC8B69003415AA /* CTFeedViewController.m */; };
+		F93916A118DBA56A004A1C27 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93916A018DBA56A004A1C27 /* Parse.framework */; };
 		F9A50DB418C8BDBB00FD7CFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB318C8BDBB00FD7CFE /* Foundation.framework */; };
 		F9A50DB618C8BDBB00FD7CFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB518C8BDBB00FD7CFE /* CoreGraphics.framework */; };
 		F9A50DB818C8BDBB00FD7CFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB718C8BDBB00FD7CFE /* UIKit.framework */; };
@@ -26,10 +28,7 @@
 		F9A50DCD18C8BDBB00FD7CFE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DCC18C8BDBB00FD7CFE /* XCTest.framework */; };
 		F9A50DCE18C8BDBB00FD7CFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB318C8BDBB00FD7CFE /* Foundation.framework */; };
 		F9A50DCF18C8BDBB00FD7CFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB718C8BDBB00FD7CFE /* UIKit.framework */; };
-		F9A50DD718C8BDBB00FD7CFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9A50DD518C8BDBB00FD7CFE /* InfoPlist.strings */; };
-		F9A50DD918C8BDBB00FD7CFE /* SagaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A50DD818C8BDBB00FD7CFE /* SagaTests.m */; };
 		F9A50DE318C8BDFD00FD7CFE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A50DE218C8BDFD00FD7CFE /* MainStoryboard.storyboard */; };
-		F9A50DE518C8BE4000FD7CFE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DE418C8BE4000FD7CFE /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +51,9 @@
 		F934367C18C9D155003415AA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F934367E18C9D15E003415AA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F934368018C9D16D003415AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F934368218CC8B69003415AA /* CTFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFeedViewController.h; sourceTree = "<group>"; };
+		F934368318CC8B69003415AA /* CTFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFeedViewController.m; sourceTree = "<group>"; };
+		F93916A018DBA56A004A1C27 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F9A50DB018C8BDBB00FD7CFE /* Saga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A50DB318C8BDBB00FD7CFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9A50DB518C8BDBB00FD7CFE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,11 +67,7 @@
 		F9A50DC518C8BDBB00FD7CFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9A50DCB18C8BDBB00FD7CFE /* SagaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SagaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A50DCC18C8BDBB00FD7CFE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F9A50DD418C8BDBB00FD7CFE /* SagaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SagaTests-Info.plist"; sourceTree = "<group>"; };
-		F9A50DD618C8BDBB00FD7CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F9A50DD818C8BDBB00FD7CFE /* SagaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SagaTests.m; sourceTree = "<group>"; };
 		F9A50DE218C8BDFD00FD7CFE /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F9A50DE418C8BE4000FD7CFE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93916A118DBA56A004A1C27 /* Parse.framework in Frameworks */,
 				F934368118C9D16D003415AA /* SystemConfiguration.framework in Frameworks */,
 				F934367F18C9D15E003415AA /* StoreKit.framework in Frameworks */,
 				F934367D18C9D155003415AA /* Security.framework in Frameworks */,
@@ -87,7 +86,6 @@
 				F9A50DB618C8BDBB00FD7CFE /* CoreGraphics.framework in Frameworks */,
 				F934367318C9D116003415AA /* CFNetwork.framework in Frameworks */,
 				F934367118C9D10D003415AA /* AudioToolbox.framework in Frameworks */,
-				F9A50DE518C8BE4000FD7CFE /* Parse.framework in Frameworks */,
 				F9A50DB818C8BDBB00FD7CFE /* UIKit.framework in Frameworks */,
 				F9A50DB418C8BDBB00FD7CFE /* Foundation.framework in Frameworks */,
 			);
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				F9A50DB918C8BDBB00FD7CFE /* Saga */,
-				F9A50DD218C8BDBB00FD7CFE /* SagaTests */,
 				F9A50DB218C8BDBB00FD7CFE /* Frameworks */,
 				F9A50DB118C8BDBB00FD7CFE /* Products */,
 			);
@@ -128,6 +125,7 @@
 		F9A50DB218C8BDBB00FD7CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F93916A018DBA56A004A1C27 /* Parse.framework */,
 				F934368018C9D16D003415AA /* SystemConfiguration.framework */,
 				F934367E18C9D15E003415AA /* StoreKit.framework */,
 				F934367C18C9D155003415AA /* Security.framework */,
@@ -137,7 +135,6 @@
 				F934367418C9D12A003415AA /* CoreLocation.framework */,
 				F934367218C9D116003415AA /* CFNetwork.framework */,
 				F934367018C9D10D003415AA /* AudioToolbox.framework */,
-				F9A50DE418C8BE4000FD7CFE /* Parse.framework */,
 				F9A50DB318C8BDBB00FD7CFE /* Foundation.framework */,
 				F9A50DB518C8BDBB00FD7CFE /* CoreGraphics.framework */,
 				F9A50DB718C8BDBB00FD7CFE /* UIKit.framework */,
@@ -151,6 +148,8 @@
 			children = (
 				F9A50DC218C8BDBB00FD7CFE /* CTAppDelegate.h */,
 				F9A50DC318C8BDBB00FD7CFE /* CTAppDelegate.m */,
+				F934368218CC8B69003415AA /* CTFeedViewController.h */,
+				F934368318CC8B69003415AA /* CTFeedViewController.m */,
 				F9A50DE218C8BDFD00FD7CFE /* MainStoryboard.storyboard */,
 				F9A50DC518C8BDBB00FD7CFE /* Images.xcassets */,
 				F9A50DBA18C8BDBB00FD7CFE /* Supporting Files */,
@@ -165,24 +164,6 @@
 				F9A50DBC18C8BDBB00FD7CFE /* InfoPlist.strings */,
 				F9A50DBF18C8BDBB00FD7CFE /* main.m */,
 				F9A50DC118C8BDBB00FD7CFE /* Saga-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F9A50DD218C8BDBB00FD7CFE /* SagaTests */ = {
-			isa = PBXGroup;
-			children = (
-				F9A50DD818C8BDBB00FD7CFE /* SagaTests.m */,
-				F9A50DD318C8BDBB00FD7CFE /* Supporting Files */,
-			);
-			path = SagaTests;
-			sourceTree = "<group>";
-		};
-		F9A50DD318C8BDBB00FD7CFE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F9A50DD418C8BDBB00FD7CFE /* SagaTests-Info.plist */,
-				F9A50DD518C8BDBB00FD7CFE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -232,7 +213,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CT;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = cottonTracks;
 				TargetAttributes = {
 					F9A50DCA18C8BDBB00FD7CFE = {
@@ -273,7 +254,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9A50DD718C8BDBB00FD7CFE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A50DC018C8BDBB00FD7CFE /* main.m in Sources */,
+				F934368418CC8B69003415AA /* CTFeedViewController.m in Sources */,
 				F9A50DC418C8BDBB00FD7CFE /* CTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9A50DD918C8BDBB00FD7CFE /* SagaTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,14 +296,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F9A50DD518C8BDBB00FD7CFE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9A50DD618C8BDBB00FD7CFE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -331,7 +303,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -370,7 +341,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -407,6 +377,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/julien/Documents/cottonTracks/Saga/Saga/Saga,
+					/Users/julien/Downloads,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Saga/Saga-Prefix.pch";
@@ -424,6 +396,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/julien/Documents/cottonTracks/Saga/Saga/Saga,
+					/Users/julien/Downloads,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Saga/Saga-Prefix.pch";
@@ -436,7 +410,6 @@
 		F9A50DE018C8BDBB00FD7CFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Saga.app/Saga";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -459,7 +432,6 @@
 		F9A50DE118C8BDBB00FD7CFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Saga.app/Saga";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
