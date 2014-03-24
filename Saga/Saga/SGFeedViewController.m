@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
     self.shooterButton.layer.cornerRadius = self.shooterButton.bounds.size.width / 2.0;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

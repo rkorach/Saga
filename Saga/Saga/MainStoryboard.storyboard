@@ -56,7 +56,6 @@
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="top" secondItem="Wz8-gK-FvN" secondAttribute="bottom" id="z5j-tO-GyM"/>
                         </constraints>
                     </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationItem key="navigationItem" id="cSU-H6-Y7a"/>
                     <connections>
                         <outlet property="shooterButton" destination="BmK-6Y-Pqk" id="oUp-oX-hpE"/>
