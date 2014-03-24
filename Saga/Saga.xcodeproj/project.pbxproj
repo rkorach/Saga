@@ -11,6 +11,8 @@
 		69B2C28018DCA99F0038DB55 /* SGSagaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C27F18DCA99F0038DB55 /* SGSagaCell.m */; };
 		69B2C28318DCA9A90038DB55 /* SGSaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C28218DCA9A90038DB55 /* SGSaCell.m */; };
 		69B2C28618DCEF680038DB55 /* SGSagaHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C28518DCEF680038DB55 /* SGSagaHolderView.m */; };
+		69B2C28918DDA2630038DB55 /* SGShooterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C28818DDA2630038DB55 /* SGShooterViewController.m */; };
+		69B2C28C18DDB1F10038DB55 /* SGshooterSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C28B18DDB1F10038DB55 /* SGshooterSegue.m */; };
 		F934367118C9D10D003415AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934367018C9D10D003415AA /* AudioToolbox.framework */; };
 		F934367318C9D116003415AA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934367218C9D116003415AA /* CFNetwork.framework */; };
 		F934367518C9D12A003415AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934367418C9D12A003415AA /* CoreLocation.framework */; };
@@ -54,6 +56,10 @@
 		69B2C28218DCA9A90038DB55 /* SGSaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSaCell.m; sourceTree = "<group>"; };
 		69B2C28418DCEF680038DB55 /* SGSagaHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSagaHolderView.h; sourceTree = "<group>"; };
 		69B2C28518DCEF680038DB55 /* SGSagaHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSagaHolderView.m; sourceTree = "<group>"; };
+		69B2C28718DDA2630038DB55 /* SGShooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGShooterViewController.h; sourceTree = "<group>"; };
+		69B2C28818DDA2630038DB55 /* SGShooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGShooterViewController.m; sourceTree = "<group>"; };
+		69B2C28A18DDB1F10038DB55 /* SGshooterSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGshooterSegue.h; sourceTree = "<group>"; };
+		69B2C28B18DDB1F10038DB55 /* SGshooterSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGshooterSegue.m; sourceTree = "<group>"; };
 		F934367018C9D10D003415AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F934367218C9D116003415AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F934367418C9D12A003415AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -159,6 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				F9A50DE218C8BDFD00FD7CFE /* MainStoryboard.storyboard */,
+				69B2C28A18DDB1F10038DB55 /* SGshooterSegue.h */,
+				69B2C28B18DDB1F10038DB55 /* SGshooterSegue.m */,
+				69B2C28718DDA2630038DB55 /* SGShooterViewController.h */,
+				69B2C28818DDA2630038DB55 /* SGShooterViewController.m */,
 				69B2C28418DCEF680038DB55 /* SGSagaHolderView.h */,
 				69B2C28518DCEF680038DB55 /* SGSagaHolderView.m */,
 				69B2C27B18DCA8FB0038DB55 /* SGFeedTableViewController.h */,
@@ -285,12 +295,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A50DC018C8BDBB00FD7CFE /* main.m in Sources */,
+				69B2C28918DDA2630038DB55 /* SGShooterViewController.m in Sources */,
 				69B2C28018DCA99F0038DB55 /* SGSagaCell.m in Sources */,
 				69B2C28318DCA9A90038DB55 /* SGSaCell.m in Sources */,
 				69B2C27D18DCA8FB0038DB55 /* SGFeedTableViewController.m in Sources */,
 				69B2C28618DCEF680038DB55 /* SGSagaHolderView.m in Sources */,
 				F934368418CC8B69003415AA /* SGFeedViewController.m in Sources */,
 				F9A50DC418C8BDBB00FD7CFE /* SGAppDelegate.m in Sources */,
+				69B2C28C18DDB1F10038DB55 /* SGshooterSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

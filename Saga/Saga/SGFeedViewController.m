@@ -7,8 +7,10 @@
 //
 
 #import "SGFeedViewController.h"
+#import "SGshooterSegue.h"
 
 @interface SGFeedViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *shooterButton;
 
 @end
 
@@ -26,7 +28,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self setNeedsStatusBarAppearanceUpdate];
+    self.shooterButton.layer.cornerRadius = self.shooterButton.bounds.size.width / 2.0;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue isKindOfClass:[SGshooterSegue class]]) {
+        // Set the start point for the animation to center of the button for the animation
+        ((SGshooterSegue *)segue).originatingPoint =  self.shooterButton.center;
+    }
+}
+
+- (IBAction)unwindFromViewController:(UIStoryboardSegue *)segue {
+    
 }
 
 - (void)didReceiveMemoryWarning

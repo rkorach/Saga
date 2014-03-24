@@ -29,6 +29,17 @@
                                     <segue destination="D1K-zp-dPG" kind="embed" id="3wi-TP-aDn"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-6Y-Pqk">
+                                <rect key="frame" x="112" y="452" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.23182122699999999" blue="0.24860856510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="d20-vp-ezT" kind="custom" identifier="Expand Circle" customClass="SGshooterSegue" id="BOI-Jy-qdQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87077487239999996" green="0.87077487239999996" blue="0.87077487239999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -46,10 +57,55 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationItem key="navigationItem" id="cSU-H6-Y7a"/>
+                    <connections>
+                        <outlet property="shooterButton" destination="BmK-6Y-Pqk" id="oUp-oX-hpE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohU-Hi-GsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="-6"/>
+            <point key="canvasLocation" x="684" y="-6"/>
+        </scene>
+        <!--Shooter View Controller-->
+        <scene sceneID="g4k-E0-8cp">
+            <objects>
+                <viewController id="d20-vp-ezT" customClass="SGShooterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1bB-hE-4i1"/>
+                        <viewControllerLayoutGuide type="bottom" id="2i8-ff-afD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ep-Uf-dRd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZES-L2-7Sk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.011832703171114359" green="0.017967986619331633" blue="0.25452407525510201" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-U0-NIC">
+                                <rect key="frame" x="145" y="518" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.090461575255102011" green="0.090461575255102011" blue="0.090461575255102011" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchEscapeShooterButton:" destination="d20-vp-ezT" eventType="touchUpInside" id="Pq4-xD-KbV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="xui-B8-V8G"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="ZES-L2-7Sk" id="aXH-Jk-Seb"/>
+                        <outlet property="closeButton" destination="loZ-U0-NIC" id="kDt-C8-N4z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0LL-Gf-mF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="696"/>
         </scene>
         <!--Feed Table View Controller-->
         <scene sceneID="yrX-2e-2Ja">
@@ -158,7 +214,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15y-2q-m7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601" y="54"/>
+            <point key="canvasLocation" x="1191" y="36"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
