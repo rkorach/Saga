@@ -8,6 +8,10 @@
 
 #import "SGFeedViewController.h"
 #import "SGshooterSegue.h"
+#import "SGShooterViewController.h"
+#import "ECSlidingViewController/ECSlidingViewController.h"
+#import "SGMenuViewController.h"
+
 
 @interface SGFeedViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *shooterButton;
@@ -30,6 +34,18 @@
     [super viewDidLoad];
     self.shooterButton.layer.cornerRadius = self.shooterButton.bounds.size.width / 2.0;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    /* hamburger menu code */
+    if(![self.slidingViewController.underLeftViewController isKindOfClass:[SGMenuViewController class]]) {
+        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    }
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    /* end hamburger menu code */
+
+}
+
+- (IBAction)touchMenuButton {
+    [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

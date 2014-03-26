@@ -7,11 +7,12 @@
 //
 
 #import "SGShooterViewController.h"
+#import "ECSlidingViewController/ECSlidingViewController.h"
+#import "UIImage+ImageWithUIView.h"
 
 @interface SGShooterViewController ()
-
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
-@property (weak, nonatomic) IBOutlet UIView *backgroundView;
+@property (strong, nonatomic) IBOutlet UIView *backgroundView;
 
 @end
 
@@ -26,31 +27,43 @@
     return self;
 }
 
-
 - (IBAction)touchEscapeShooterButton:(UIButton *)sender {
-    if (self.active) { // do not perform anything if the VC is animating
-        [self backToPreviousViewController:sender.center];
-    }
+    [self backToPreviousViewController:sender.center];
 }
 
 - (void)backToPreviousViewController:(CGPoint)originPoint
 {
-    UIView *destinationVCView = self.backViewControllerView;
+    UIViewController *destinationVC = self.previousViewController;
     
-    // Add the destination view as a subview, temporarily
-    // and send it in the back.
-    // because we need to hide the destination view, we've added a
-    // 'background' view to the current view
-    [self.view addSubview:destinationVCView];
-    [self.view sendSubviewToBack:destinationVCView];
+    // TODO(pink) it looks like having a layer on top still enables to click on
+    // the "dismiss" cross underneath. Handle this.
+    
+    // Create destination image layer
+    UIImage *destinationImage = [UIImage imageFromView:destinationVC.view];
+    CALayer * destinationLayer = [CALayer layer];
+    CGRect destinationFrame = CGRectMake(0.0, 0.0, destinationImage.size.width, destinationImage.size.height);
+    destinationLayer.contents = (id)destinationImage.CGImage;
+    destinationLayer.frame = destinationFrame;
+    
+    // Create current image layer
+    UIImage *currentImage = [UIImage imageFromView:self.view];
+    CALayer * currentLayer = [CALayer layer];
+    CGRect currentFrame = CGRectMake(0.0, 0.0, currentImage.size.width, currentImage.size.height);
+    currentLayer.contents = (id)currentImage.CGImage;
+    currentLayer.frame = currentFrame;
+    
+    // Add the two layers for the animation
+    [self.view.layer addSublayer:destinationLayer];
+    [self.view.layer addSublayer:currentLayer];
+
     CGRect rect = CGRectMake(originPoint.x-10, originPoint.y-10, 20.0, 20.0);
     CGRect maskRect = CGRectMake(0, 0, 20.0, 20.0);
-    
+
     // Create the mask that will be animated
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:maskRect
                                                    byRoundingCorners:UIRectCornerAllCorners
-                                                         cornerRadii:CGSizeMake(destinationVCView.bounds.size.height/2, destinationVCView.bounds.size.height/2)];
-    
+                                                         cornerRadii:CGSizeMake(destinationVC.view.bounds.size.height/2, destinationVC.view.bounds.size.height/2)];
+
     // Create the shape layer and set its path
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
     maskLayer.frame = rect;
@@ -58,10 +71,10 @@
     
     // for this disapearing transition, we animate the current view
     // with a mask, not the destination view.
-    self.backgroundView.layer.mask = maskLayer;
+    currentLayer.mask = maskLayer;
     
     // Custom transformation (because it is on a CALayer, not on a UIView) start scale
-    self.backgroundView.layer.mask.anchorPoint = CGPointMake(0.5f, 0.5f);
+    currentLayer.mask.anchorPoint = CGPointMake(0.5f, 0.5f);
     CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     [scale setFromValue:[NSNumber numberWithFloat:60.0f]];
     [scale setToValue:[NSNumber numberWithFloat:0.0]];
@@ -73,12 +86,12 @@
     // When all code between the completion block definition and the [CATransaction commit]
     // is done executing, th completion block executes
     [CATransaction setCompletionBlock:^{
-        [destinationVCView removeFromSuperview]; // remove from temp super view
-        // dismiss current VC and pop back to previous one
+        [destinationLayer removeFromSuperlayer];
+        [currentLayer removeFromSuperlayer];
         [self dismissViewControllerAnimated:NO completion:nil];
     }];
     
-    [self.backgroundView.layer.mask addAnimation:scale forKey:nil]; // launch animation
+    [currentLayer.mask addAnimation:scale forKey:nil]; // launch animation
     
     [CATransaction commit];
 }

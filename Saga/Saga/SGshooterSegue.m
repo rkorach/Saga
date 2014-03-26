@@ -12,22 +12,19 @@
 @implementation SGshooterSegue
 
 - (void)perform {
+
     // overrides the UIStoryboardSegue superclass perform method.
     // triggered when the segue happens.
     
-    
     UIViewController *sourceVC = self.sourceViewController;
     SGShooterViewController *destinationVC = self.destinationViewController;
-    // We set the destination VC as inactive because clicking a button
-    // during the transition crashes the app
-    destinationVC.active = NO;
     
     // We tell the destination VC what was the previous view to be able to do the
     // reverse transition effect without a segue
-    destinationVC.backViewControllerView = sourceVC.view;
+    destinationVC.previousViewController = sourceVC;
     
     // Add the destination view as a subview, temporarily
-    [sourceVC.view addSubview:destinationVC.view];
+    [sourceVC.view.layer addSublayer:destinationVC.view.layer];
     
     // Create the mask that will be animated
     CGRect rect = CGRectMake(self.originatingPoint.x - 10, self.originatingPoint.y - 10, 20.0, 20.0);
@@ -58,8 +55,7 @@
     // is done executing, th completion block executes
     [CATransaction setCompletionBlock:^{
         destinationVC.view.layer.mask = nil;
-        destinationVC.active = YES; // now the destination VC can be active
-        [destinationVC.view removeFromSuperview]; // remove from temp super view
+        [destinationVC.view.layer removeFromSuperlayer]; // remove from temp super view
         [sourceVC presentViewController:destinationVC animated:NO completion:NULL]; // present VC
     }];
     

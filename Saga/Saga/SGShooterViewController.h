@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SGShooterViewController : UIViewController
-
-@property (nonatomic, weak) UIView *backViewControllerView;
-@property (nonatomic) BOOL active;
-
+@property (nonatomic, weak) UIViewController *previousViewController;
 @end
