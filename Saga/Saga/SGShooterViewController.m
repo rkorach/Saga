@@ -30,9 +30,8 @@ AVCaptureStillImageOutput *stillImageOutput;
     NSError *error;
     AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice: inputDevice error: &error];
     
-    if([session canAddInput:deviceInput]){
+    if([session canAddInput:deviceInput])
         [session addInput:deviceInput];
-    }
     
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
@@ -52,6 +51,10 @@ AVCaptureStillImageOutput *stillImageOutput;
     [session addOutput:stillImageOutput];
     
     [session startRunning];
+    
+    [self SAGAType];
+    
+    [super viewWillAppear:animated];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -151,6 +154,21 @@ AVCaptureStillImageOutput *stillImageOutput;
             UIImage *image = [UIImage imageWithData:imagedata];
         }
     }];
+}
+
+- (IBAction)switchSAGA:(id)sender {
+    [self SAGAType];
+}
+
+- (void)SAGAType {
+    if([[self switchImageType] isOn]){
+        [[self GALabel] setHidden: true];
+        [[self SAImage] setHidden: false];
+    }
+    else{
+        [[self GALabel] setHidden: false];
+        [[self SAImage] setHidden: true];
+    }
 }
 
 - (void)didReceiveMemoryWarning
