@@ -38,6 +38,7 @@
 		F934368118C9D16D003415AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934368018C9D16D003415AA /* SystemConfiguration.framework */; };
 		F934368418CC8B69003415AA /* SGFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F934368318CC8B69003415AA /* SGFeedViewController.m */; };
 		F93916A118DBA56A004A1C27 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93916A018DBA56A004A1C27 /* Parse.framework */; };
+		F984D63E18E4B3B400CAA420 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F984D63D18E4B3B400CAA420 /* AVFoundation.framework */; };
 		F9A50DB418C8BDBB00FD7CFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB318C8BDBB00FD7CFE /* Foundation.framework */; };
 		F9A50DB618C8BDBB00FD7CFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB518C8BDBB00FD7CFE /* CoreGraphics.framework */; };
 		F9A50DB818C8BDBB00FD7CFE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A50DB718C8BDBB00FD7CFE /* UIKit.framework */; };
@@ -114,6 +115,7 @@
 		F934368218CC8B69003415AA /* SGFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFeedViewController.h; sourceTree = "<group>"; };
 		F934368318CC8B69003415AA /* SGFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFeedViewController.m; sourceTree = "<group>"; };
 		F93916A018DBA56A004A1C27 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F984D63D18E4B3B400CAA420 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F9A50DB018C8BDBB00FD7CFE /* Saga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A50DB318C8BDBB00FD7CFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9A50DB518C8BDBB00FD7CFE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F984D63E18E4B3B400CAA420 /* AVFoundation.framework in Frameworks */,
 				F93916A118DBA56A004A1C27 /* Parse.framework in Frameworks */,
 				F934368118C9D16D003415AA /* SystemConfiguration.framework in Frameworks */,
 				F934367F18C9D15E003415AA /* StoreKit.framework in Frameworks */,
@@ -319,6 +322,7 @@
 		F9A50DB218C8BDBB00FD7CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F984D63D18E4B3B400CAA420 /* AVFoundation.framework */,
 				F93916A018DBA56A004A1C27 /* Parse.framework */,
 				F934368018C9D16D003415AA /* SystemConfiguration.framework */,
 				F934367E18C9D15E003415AA /* StoreKit.framework */,

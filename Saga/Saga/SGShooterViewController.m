@@ -9,6 +9,7 @@
 #import "SGShooterViewController.h"
 #import "ECSlidingViewController/ECSlidingViewController.h"
 #import "UIImage+ImageWithUIView.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface SGShooterViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
@@ -17,6 +18,42 @@
 @end
 
 @implementation SGShooterViewController
+
+AVCaptureSession *session;
+AVCaptureStillImageOutput *stillImageOutput;
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    session = [[AVCaptureSession alloc] init];
+    [session setSessionPreset:AVCaptureSessionPresetPhoto];
+    
+    AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError *error;
+    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice: inputDevice error: &error];
+    
+    if([session canAddInput:deviceInput]){
+        [session addInput:deviceInput];
+    }
+    
+    AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
+    [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    
+    CALayer *rootLayer = [[self view] layer];
+    [rootLayer setMasksToBounds:YES];
+    CGRect frame = self.frameForCapture.frame;
+    
+    [previewLayer setFrame:frame];
+    
+    [rootLayer insertSublayer:previewLayer atIndex:0];
+    
+    stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [NSDictionary dictionaryWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
+    [stillImageOutput setOutputSettings:outputSettings];
+    
+    [session addOutput:stillImageOutput];
+    
+    [session startRunning];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -103,10 +140,29 @@
     self.closeButton.layer.cornerRadius = self.closeButton.bounds.size.width / 2.0;
 }
 
+- (IBAction)takePhoto:(id)sender {
+    AVCaptureConnection *videoConnection = nil;
+    for(AVCaptureConnection *connection in stillImageOutput.connections){
+        for(AVCaptureInputPort *port in connection.inputPorts){
+            if([[port mediaType] isEqual:AVMediaTypeVideo]){
+                videoConnection = connection;
+                break;
+            }
+        }
+        if(videoConnection)
+            break;
+    }
+    [stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+        if(imageDataSampleBuffer != NULL){
+            NSData *imagedata = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
+            UIImage *image = [UIImage imageWithData:imagedata];
+        }
+    }];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end
