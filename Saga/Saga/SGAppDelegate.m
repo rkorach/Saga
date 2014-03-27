@@ -19,6 +19,12 @@
     //Parse analytics - App launched
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // Dots styling for UIPageViewController (walkthrough panel);
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
+    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.backgroundColor = [UIColor clearColor];
+    
     return YES;
 }
 

@@ -27,18 +27,32 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
-    /* Hamburger menu code */
-    // we set the what we want to be the initial ViewController as the top viewController
-    self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Home"];
-    /* end hamburger menu code */
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Login and Signup Process
+// tutorial and code available on Parse website: https://parse.com/tutorials/login-and-signup-views
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (![PFUser currentUser]) {
+        UIViewController *walkthroughVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WalkthroughMaster"];
+        [self presentViewController:walkthroughVC animated:NO completion:NULL];
+    } else {
+        [PFUser logOut]; // log out, for coding purpose.
+        
+        /* Hamburger menu code */
+        // we set the what we want to be the initial ViewController as the top viewController
+        self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Home"];
+        /* end hamburger menu code */
+    }
 }
 
 @end

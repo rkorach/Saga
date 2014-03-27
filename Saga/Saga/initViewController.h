@@ -7,6 +7,7 @@
 //
 
 #import "ECSlidingViewController.h"
+#import <Parse/Parse.h>
 
 @interface initViewController : ECSlidingViewController
 

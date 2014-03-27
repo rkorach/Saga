@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6976AA9B18E356170000D609 /* SGWalkthroughPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AA9A18E356170000D609 /* SGWalkthroughPageVC.m */; };
+		6976AA9E18E356DB0000D609 /* SGWalkthroughMasterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AA9D18E356DB0000D609 /* SGWalkthroughMasterVC.m */; };
+		6976AAA318E48AF40000D609 /* UIColor+SGColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AAA218E48AF40000D609 /* UIColor+SGColors.m */; };
+		6976AAA618E498B10000D609 /* CAGradientLayer+SGGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AAA518E498B10000D609 /* CAGradientLayer+SGGradientLayer.m */; };
 		69B2C27D18DCA8FB0038DB55 /* SGFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C27C18DCA8FB0038DB55 /* SGFeedTableViewController.m */; };
 		69B2C28018DCA99F0038DB55 /* SGSagaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C27F18DCA99F0038DB55 /* SGSagaCell.m */; };
 		69B2C28318DCA9A90038DB55 /* SGSaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C28218DCA9A90038DB55 /* SGSaCell.m */; };
@@ -55,6 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6976AA9918E356170000D609 /* SGWalkthroughPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWalkthroughPageVC.h; sourceTree = "<group>"; };
+		6976AA9A18E356170000D609 /* SGWalkthroughPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWalkthroughPageVC.m; sourceTree = "<group>"; };
+		6976AA9C18E356DB0000D609 /* SGWalkthroughMasterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWalkthroughMasterVC.h; sourceTree = "<group>"; };
+		6976AA9D18E356DB0000D609 /* SGWalkthroughMasterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWalkthroughMasterVC.m; sourceTree = "<group>"; };
+		6976AAA118E48AF40000D609 /* UIColor+SGColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SGColors.h"; sourceTree = "<group>"; };
+		6976AAA218E48AF40000D609 /* UIColor+SGColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGColors.m"; sourceTree = "<group>"; };
+		6976AAA418E498B10000D609 /* CAGradientLayer+SGGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+SGGradientLayer.h"; sourceTree = "<group>"; };
+		6976AAA518E498B10000D609 /* CAGradientLayer+SGGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+SGGradientLayer.m"; sourceTree = "<group>"; };
 		69B2C27B18DCA8FB0038DB55 /* SGFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFeedTableViewController.h; sourceTree = "<group>"; };
 		69B2C27C18DCA8FB0038DB55 /* SGFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFeedTableViewController.m; sourceTree = "<group>"; };
 		69B2C27E18DCA99F0038DB55 /* SGSagaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSagaCell.h; sourceTree = "<group>"; };
@@ -185,6 +197,28 @@
 			name = shooter;
 			sourceTree = "<group>";
 		};
+		6976AA9818E355C50000D609 /* walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				6976AA9918E356170000D609 /* SGWalkthroughPageVC.h */,
+				6976AA9A18E356170000D609 /* SGWalkthroughPageVC.m */,
+				6976AA9C18E356DB0000D609 /* SGWalkthroughMasterVC.h */,
+				6976AA9D18E356DB0000D609 /* SGWalkthroughMasterVC.m */,
+			);
+			name = walkthrough;
+			sourceTree = "<group>";
+		};
+		6976AAA018E48A3B0000D609 /* colors */ = {
+			isa = PBXGroup;
+			children = (
+				6976AAA118E48AF40000D609 /* UIColor+SGColors.h */,
+				6976AAA218E48AF40000D609 /* UIColor+SGColors.m */,
+				6976AAA418E498B10000D609 /* CAGradientLayer+SGGradientLayer.h */,
+				6976AAA518E498B10000D609 /* CAGradientLayer+SGGradientLayer.m */,
+			);
+			name = colors;
+			sourceTree = "<group>";
+		};
 		69B2C29318E18C6E0038DB55 /* ECSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +270,7 @@
 				6976AA9218E22B020000D609 /* feed */,
 				6976AA9318E22B0E0000D609 /* profile */,
 				6976AA9418E22B240000D609 /* shooter */,
+				6976AA9818E355C50000D609 /* walkthrough */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -289,6 +324,7 @@
 				69DB2BAB18E19BAE00913048 /* appdelegate */,
 				69B2C29318E18C6E0038DB55 /* ECSlidingViewController */,
 				F9A50DC518C8BDBB00FD7CFE /* Images.xcassets */,
+				6976AAA018E48A3B0000D609 /* colors */,
 				F9A50DBA18C8BDBB00FD7CFE /* Supporting Files */,
 			);
 			path = Saga;
@@ -401,8 +437,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6976AA9B18E356170000D609 /* SGWalkthroughPageVC.m in Sources */,
+				6976AAA618E498B10000D609 /* CAGradientLayer+SGGradientLayer.m in Sources */,
 				69B2C29918E18C6E0038DB55 /* UIImage+ImageWithUIView.m in Sources */,
 				69DB2BB218E1E18A00913048 /* initViewController.m in Sources */,
+				6976AA9E18E356DB0000D609 /* SGWalkthroughMasterVC.m in Sources */,
 				F9A50DC018C8BDBB00FD7CFE /* main.m in Sources */,
 				69B2C28918DDA2630038DB55 /* SGShooterViewController.m in Sources */,
 				69B2C29818E18C6E0038DB55 /* ECSlidingViewController.m in Sources */,
@@ -413,6 +452,7 @@
 				69B2C27D18DCA8FB0038DB55 /* SGFeedTableViewController.m in Sources */,
 				69DB2BA818E1986C00913048 /* SGMenuTableViewController.m in Sources */,
 				69DB2BAF18E19DC200913048 /* SGMenuViewController.m in Sources */,
+				6976AAA318E48AF40000D609 /* UIColor+SGColors.m in Sources */,
 				69B2C28618DCEF680038DB55 /* SGSagaHolderView.m in Sources */,
 				F934368418CC8B69003415AA /* SGFeedViewController.m in Sources */,
 				F9A50DC418C8BDBB00FD7CFE /* SGAppDelegate.m in Sources */,

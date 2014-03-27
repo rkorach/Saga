@@ -22,6 +22,109 @@
             </objects>
             <point key="canvasLocation" x="224" y="-763"/>
         </scene>
+        <!--Walkthrough MasterVC-->
+        <scene sceneID="6yM-o4-r7u">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughMaster" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sTO-dh-vKt" customClass="SGWalkthroughMasterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vwj-br-fb6"/>
+                        <viewControllerLayoutGuide type="bottom" id="l1s-5q-hoF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YKC-C4-qJ6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-3O-n0y">
+                                <rect key="frame" x="0.0" y="456" width="320" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMv-mf-Qnj">
+                                        <rect key="frame" x="251" y="58" width="33" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchLoginButton" destination="sTO-dh-vKt" eventType="touchUpInside" id="l0U-yV-t8w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAi-Vi-K9W">
+                                        <rect key="frame" x="103" y="14" width="115" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchSignupButton" destination="sTO-dh-vKt" eventType="touchUpInside" id="Od1-ez-yN4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already part of the Saga family?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-ul-wxd">
+                                        <rect key="frame" x="36" y="62" width="207" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1S-Ps-sH4">
+                                        <rect key="frame" x="101" y="82" width="118" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="terms of services">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.039215686274509803" green="0.082352941176470587" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.0" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomView" destination="AbA-3O-n0y" id="lcf-ce-a7V"/>
+                        <outlet property="signUpButton" destination="kAi-Vi-K9W" id="Bk0-11-9up"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zj2-V8-5a2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="-741"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="eTV-Bh-OM5">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aEE-B5-mHZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZ4-TM-ivC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150" y="-741"/>
+        </scene>
+        <!--Walkthrough PageVC-->
+        <scene sceneID="WgZ-YO-quh">
+            <objects>
+                <viewController storyboardIdentifier="Page1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xdb-cJ-Nyj" customClass="SGWalkthroughPageVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pjP-tD-hXx"/>
+                        <viewControllerLayoutGuide type="bottom" id="CZb-Ng-no4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="geg-WI-hom">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saga is the best way to engage your friends and people around the world through your photos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="eMg-rz-Zpn">
+                                <rect key="frame" x="36" y="295" width="248" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FsH-oF-n35" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="-741"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="VBb-Q7-yID">
             <objects>
@@ -61,12 +164,12 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.01183270317" green="0.017967986620000001" blue="0.25452407529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.08235294118" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1l2-Ce-lJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="-763"/>
+            <point key="canvasLocation" x="1591" y="-6"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="esi-XX-alZ">
@@ -76,7 +179,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="339"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" red="1" green="0.23182122699999999" blue="0.24860856510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.98039215690000003" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="MenuCell" id="qTd-rM-GWf" customClass="SGMenuCell">
                                 <rect key="frame" x="0.0" y="55" width="320" height="44"/>
@@ -108,7 +211,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBy-a1-8a0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="-534"/>
+            <point key="canvasLocation" x="2055" y="223"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="18E-5a-f0Q">
@@ -138,7 +241,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.23182122699999999" blue="0.24860856510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hc-wu-82g">
                                 <rect key="frame" x="0.0" y="60" width="320" height="508"/>
@@ -153,6 +256,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.23182122699999999" blue="0.24860856510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -178,6 +282,7 @@
                     <navigationItem key="navigationItem" id="cSU-H6-Y7a"/>
                     <connections>
                         <outlet property="shooterButton" destination="BmK-6Y-Pqk" id="oUp-oX-hpE"/>
+                        <outlet property="topBarView" destination="Wz8-gK-FvN" id="6B8-nP-Aqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohU-Hi-GsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,7 +314,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.01183270317" green="0.017967986620000001" blue="0.25452407529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.08235294118" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="xui-B8-V8G"/>
                     <connections>
@@ -276,7 +381,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.23182122699999999" blue="0.24860856510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.87077487239999996" green="0.87077487239999996" blue="0.87077487239999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -284,6 +389,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Mzv-74-Gih" id="cIj-GR-gOJ"/>
                         <outlet property="profilePic" destination="LC2-zc-m7m" id="rex-Zr-1Qf"/>
+                        <outlet property="topBarView" destination="Vbs-Es-clF" id="ncE-EP-Vqk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y49-a4-8IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,6 +504,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15y-2q-m7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137" y="54"/>
+        </scene>
+        <!--Walkthrough PageVC-->
+        <scene sceneID="yhV-lF-Yhd">
+            <objects>
+                <viewController storyboardIdentifier="Page2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3BH-Ak-lid" customClass="SGWalkthroughPageVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xg1-uw-pDS"/>
+                        <viewControllerLayoutGuide type="bottom" id="p1M-Ld-rk1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9oV-qP-MCG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take the first half of a picture, and see how you inspire people to complete it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="BrO-HU-IZv">
+                                <rect key="frame" x="36" y="298" width="248" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycy-HJ-0Mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941" y="-741"/>
+        </scene>
+        <!--Walkthrough PageVC-->
+        <scene sceneID="m8J-o6-xjT">
+            <objects>
+                <viewController storyboardIdentifier="Page3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="To4-Kq-kw1" customClass="SGWalkthroughPageVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LYC-78-oxB"/>
+                        <viewControllerLayoutGuide type="bottom" id="9xR-X3-y9N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N5S-do-V9w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can also complete some half-pictures that got your attention with a second half of your own" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-xk-zD7">
+                                <rect key="frame" x="36" y="290" width="248" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guh-42-P7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313" y="-741"/>
+        </scene>
+        <!--Walkthrough PageVC-->
+        <scene sceneID="va7-GQ-xaP">
+            <objects>
+                <viewController storyboardIdentifier="FirstPhoto" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Cq-nk-wF2" customClass="SGWalkthroughPageVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aqa-JP-nt7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iih-bT-idU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yKB-Nb-s0V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaK-4B-Wdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="-741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rkk-g4-1q4">
+            <objects>
+                <viewController storyboardIdentifier="Signup" useStoryboardIdentifierAsRestorationIdentifier="YES" id="whi-m8-Ndc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JEO-xZ-CbP"/>
+                        <viewControllerLayoutGuide type="bottom" id="gIS-f4-RUe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jj7-7D-UvF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9r-7F-5lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3040" y="-741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="axZ-ha-kkq">
+            <objects>
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S9Q-wN-g5C" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ytC-Ou-6KM"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Ln-Go-5Q1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ndC-I0-iWI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IN9-1E-4by" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3404" y="-741"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

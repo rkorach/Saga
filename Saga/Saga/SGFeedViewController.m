@@ -11,10 +11,12 @@
 #import "SGShooterViewController.h"
 #import "ECSlidingViewController/ECSlidingViewController.h"
 #import "SGMenuViewController.h"
+#import "CAGradientLayer+SGGradientLayer.h"
 
 
 @interface SGFeedViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *shooterButton;
+@property (weak, nonatomic) IBOutlet UIView *topBarView;
 
 @end
 
@@ -32,8 +34,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.shooterButton.layer.cornerRadius = self.shooterButton.bounds.size.width / 2.0;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [CAGradientLayer addTransparentBlueGradientLayerToView:self.topBarView];
     
     /* hamburger menu code */
     if(![self.slidingViewController.underLeftViewController isKindOfClass:[SGMenuViewController class]]) {

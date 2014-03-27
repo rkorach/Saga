@@ -9,12 +9,14 @@
 #import "SGProfileViewController.h"
 #import "ECSlidingViewController/ECSlidingViewController.h"
 #import "SGMenuViewController.h"
+#import "CAGradientLayer+SGGradientLayer.h"
 
 @interface SGProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong,nonatomic) NSArray *photos;
 @property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UIView *topBarView;
 @end
 
 @implementation SGProfileViewController 
@@ -32,6 +34,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [CAGradientLayer addTransparentBlueGradientLayerToView:self.topBarView];
     [self fetchPhotos];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Profile Feed Cell"];
     
