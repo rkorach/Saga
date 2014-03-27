@@ -127,6 +127,12 @@ AVCaptureStillImageOutput *stillImageOutput;
     self.closeButton.layer.cornerRadius = self.closeButton.bounds.size.width / 2.0;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [super viewDidAppear:animated];
+}
+
 - (IBAction)takePhoto:(id)sender {
     AVCaptureConnection *videoConnection = nil;
     for(AVCaptureConnection *connection in stillImageOutput.connections){

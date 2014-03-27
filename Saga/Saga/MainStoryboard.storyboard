@@ -88,7 +88,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-U0-NIC">
-                                        <rect key="frame" x="147" y="522" width="26" height="26"/>
+                                        <rect key="frame" x="147" y="521" width="27" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.090461575255102011" green="0.090461575255102011" blue="0.090461575255102011" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="close_takepicture">
