@@ -18,11 +18,13 @@
 
 @implementation SGShooterViewController
 
+//Global variables from the camera
 AVCaptureSession *session;
 AVCaptureStillImageOutput *stillImageOutput;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    //Get the back camera display on the screen where the frame is
     session = [[AVCaptureSession alloc] init];
     [session setSessionPreset:AVCaptureSessionPresetPhoto];
     
@@ -52,6 +54,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     
     [session startRunning];
     
+    //Set camera type
     [self SAGAType];
     
     [super viewWillAppear:animated];
