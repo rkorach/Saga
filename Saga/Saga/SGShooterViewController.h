@@ -10,7 +10,11 @@
 
 @interface SGShooterViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *frameForCapture;
+
 @property (nonatomic, weak) UIView *backViewControllerView;
 @property (nonatomic) BOOL active;
+
+- (IBAction)takePhoto:(id)sender;
 
 @end

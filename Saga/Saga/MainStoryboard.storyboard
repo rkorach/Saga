@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u9L-SX-eyD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="u9L-SX-eyD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Feed View Controller-->
@@ -57,6 +57,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cSU-H6-Y7a"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="shooterButton" destination="BmK-6Y-Pqk" id="oUp-oX-hpE"/>
                     </connections>
@@ -80,26 +81,46 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZES-L2-7Sk">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Abf-i3-IIt">
+                                        <rect key="frame" x="5" y="94" width="310" height="310"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-U0-NIC">
+                                        <rect key="frame" x="147" y="522" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.090461575255102011" green="0.090461575255102011" blue="0.090461575255102011" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="close_takepicture">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchEscapeShooterButton:" destination="d20-vp-ezT" eventType="touchUpInside" id="Pq4-xD-KbV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Si-eV-VU5">
+                                        <rect key="frame" x="137" y="452" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.97647064920000004" green="0.0" blue="0.22745099660000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="d20-vp-ezT" eventType="touchUpInside" id="ePk-3G-K9G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.011832703171114359" green="0.017967986619331633" blue="0.25452407525510201" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-U0-NIC">
-                                <rect key="frame" x="145" y="518" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.090461575255102011" green="0.090461575255102011" blue="0.090461575255102011" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="x">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchEscapeShooterButton:" destination="d20-vp-ezT" eventType="touchUpInside" id="Pq4-xD-KbV"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="xui-B8-V8G"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="backgroundView" destination="ZES-L2-7Sk" id="aXH-Jk-Seb"/>
                         <outlet property="closeButton" destination="loZ-U0-NIC" id="kDt-C8-N4z"/>
+                        <outlet property="frameForCapture" destination="Abf-i3-IIt" id="Y2q-vI-MDK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LL-Gf-mF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,6 +237,9 @@
             <point key="canvasLocation" x="1191" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close_takepicture" width="13" height="13"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
