@@ -484,14 +484,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abf-i3-IIt">
-                                        <rect key="frame" x="0.0" y="57" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="53" width="320" height="320"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-vq-Rhj">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-G4-Ubw">
+                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-G4-Ubw">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="320"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
@@ -555,7 +555,7 @@
                                     <constraint firstAttribute="trailing" secondItem="9sr-yb-ji2" secondAttribute="trailing" constant="137" id="41t-wa-pzl"/>
                                     <constraint firstAttribute="trailing" secondItem="Abf-i3-IIt" secondAttribute="trailing" id="RGq-Cy-pVD"/>
                                     <constraint firstItem="9sr-yb-ji2" firstAttribute="top" secondItem="ZES-L2-7Sk" secondAttribute="top" constant="11" id="fqg-9B-IMw"/>
-                                    <constraint firstItem="Abf-i3-IIt" firstAttribute="top" secondItem="9sr-yb-ji2" secondAttribute="bottom" constant="15" id="gHj-Zg-vcZ"/>
+                                    <constraint firstItem="Abf-i3-IIt" firstAttribute="top" secondItem="9sr-yb-ji2" secondAttribute="bottom" constant="11" id="gHj-Zg-vcZ"/>
                                     <constraint firstItem="9sr-yb-ji2" firstAttribute="leading" secondItem="ZES-L2-7Sk" secondAttribute="leading" constant="134" id="l71-HV-RZc"/>
                                     <constraint firstItem="Abf-i3-IIt" firstAttribute="leading" secondItem="ZES-L2-7Sk" secondAttribute="leading" id="p8a-ci-9bL"/>
                                 </constraints>
