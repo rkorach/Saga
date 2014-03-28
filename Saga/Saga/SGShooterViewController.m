@@ -175,9 +175,11 @@ AVCaptureStillImageOutput *stillImageOutput;
         if(imageDataSampleBuffer != NULL){
             NSData *imagedata = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
             UIImage *image = [UIImage imageWithData:imagedata];
-            //TODO: resize the image according to camera mode then send it to parse
             
+            //Display the output image
             self.outputImage.image = image;
+            
+            
         }
     }];
 }
