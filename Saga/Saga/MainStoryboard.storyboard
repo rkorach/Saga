@@ -479,15 +479,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZES-L2-7Sk">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZES-L2-7Sk">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Abf-i3-IIt">
-                                        <rect key="frame" x="0.0" y="94" width="320" height="320"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abf-i3-IIt">
+                                        <rect key="frame" x="0.0" y="57" width="320" height="320"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-vq-Rhj">
+                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-vq-Rhj">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -504,6 +504,14 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="WYw-vq-Rhj" firstAttribute="leading" secondItem="Abf-i3-IIt" secondAttribute="leading" id="2gK-PT-Ug0"/>
+                                            <constraint firstItem="WYw-vq-Rhj" firstAttribute="top" secondItem="Abf-i3-IIt" secondAttribute="top" id="MgU-Tw-PxS"/>
+                                            <constraint firstAttribute="bottom" secondItem="WYw-vq-Rhj" secondAttribute="bottom" id="SBv-LW-quo"/>
+                                            <constraint firstAttribute="height" constant="320" id="dKt-7L-b4E"/>
+                                            <constraint firstAttribute="trailing" secondItem="WYw-vq-Rhj" secondAttribute="trailing" id="tIW-xj-fye"/>
+                                            <constraint firstAttribute="width" constant="320" id="xHB-P4-4cx"/>
+                                        </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-U0-NIC">
                                         <rect key="frame" x="147" y="521" width="27" height="27"/>
@@ -528,9 +536,13 @@
                                             <action selector="takePhoto:" destination="d20-vp-ezT" eventType="touchUpInside" id="ePk-3G-K9G"/>
                                         </connections>
                                     </button>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9sr-yb-ji2">
-                                        <rect key="frame" x="136" y="55" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9sr-yb-ji2">
+                                        <rect key="frame" x="134" y="11" width="51" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Dcd-u2-bJB"/>
+                                            <constraint firstAttribute="width" constant="49" id="sjv-ql-gzu"/>
+                                        </constraints>
                                         <color key="onTintColor" red="0.97647064920000004" green="0.0" blue="0.22745099660000001" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -539,9 +551,23 @@
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" red="0.011832703171114359" green="0.017967986619331633" blue="0.25452407525510201" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9sr-yb-ji2" secondAttribute="trailing" constant="137" id="41t-wa-pzl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Abf-i3-IIt" secondAttribute="trailing" id="RGq-Cy-pVD"/>
+                                    <constraint firstItem="9sr-yb-ji2" firstAttribute="top" secondItem="ZES-L2-7Sk" secondAttribute="top" constant="11" id="fqg-9B-IMw"/>
+                                    <constraint firstItem="Abf-i3-IIt" firstAttribute="top" secondItem="9sr-yb-ji2" secondAttribute="bottom" constant="15" id="gHj-Zg-vcZ"/>
+                                    <constraint firstItem="9sr-yb-ji2" firstAttribute="leading" secondItem="ZES-L2-7Sk" secondAttribute="leading" constant="134" id="l71-HV-RZc"/>
+                                    <constraint firstItem="Abf-i3-IIt" firstAttribute="leading" secondItem="ZES-L2-7Sk" secondAttribute="leading" id="p8a-ci-9bL"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.039215686270000001" green="0.08235294118" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZES-L2-7Sk" firstAttribute="leading" secondItem="8Ep-Uf-dRd" secondAttribute="leading" id="Zev-kH-bwx"/>
+                            <constraint firstItem="ZES-L2-7Sk" firstAttribute="top" secondItem="1bB-hE-4i1" secondAttribute="bottom" id="fVU-OP-jCB"/>
+                            <constraint firstAttribute="trailing" secondItem="ZES-L2-7Sk" secondAttribute="trailing" id="oZ7-p0-n9z"/>
+                            <constraint firstItem="2i8-ff-afD" firstAttribute="top" secondItem="ZES-L2-7Sk" secondAttribute="bottom" id="sjH-bX-H6q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xui-B8-V8G"/>
                     <nil key="simulatedStatusBarMetrics"/>
