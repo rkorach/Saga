@@ -119,7 +119,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     
-    CALayer *rootLayer = [[self frameForCapture] layer];
+    CALayer *rootLayer = [[self backgroundView] layer];
     [rootLayer setMasksToBounds:YES];
     CGRect frame = self.frameForCapture.frame;
     
@@ -151,6 +151,14 @@ AVCaptureStillImageOutput *stillImageOutput;
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBActions
+
 - (IBAction)takePhoto:(id)sender {
     AVCaptureConnection *videoConnection = nil;
     for(AVCaptureConnection *connection in stillImageOutput.connections){
@@ -177,6 +185,8 @@ AVCaptureStillImageOutput *stillImageOutput;
     [self SAGAMode];
 }
 
+#pragma mark - Helper methods
+
 - (void)SAGAMode {
     if([[self switchImageType] isOn]){
         [[self GALabel] setHidden: true];
@@ -186,11 +196,5 @@ AVCaptureStillImageOutput *stillImageOutput;
         [[self GALabel] setHidden: false];
         [[self SAImage] setHidden: true];
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 @end
