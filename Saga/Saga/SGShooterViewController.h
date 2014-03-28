@@ -22,6 +22,6 @@
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)switchSAGA:(id)sender;
 
-- (void)SAGAType;
+- (void)SAGAMode;
 
 @end

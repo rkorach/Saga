@@ -26,7 +26,7 @@ AVCaptureStillImageOutput *stillImageOutput;
 - (void)viewWillAppear:(BOOL)animated
 {
     //Set camera type
-    [self SAGAType];
+    [self SAGAMode];
     
     [super viewWillAppear:animated];
 }
@@ -159,8 +159,9 @@ AVCaptureStillImageOutput *stillImageOutput;
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [super viewDidAppear:animated];
+    //Hide the status bar on the camera view
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (IBAction)takePhoto:(id)sender {
@@ -186,10 +187,10 @@ AVCaptureStillImageOutput *stillImageOutput;
 }
 
 - (IBAction)switchSAGA:(id)sender {
-    [self SAGAType];
+    [self SAGAMode];
 }
 
-- (void)SAGAType {
+- (void)SAGAMode {
     if([[self switchImageType] isOn]){
         [[self GALabel] setHidden: true];
         [[self SAImage] setHidden: false];
