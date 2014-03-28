@@ -86,6 +86,10 @@
                                         <rect key="frame" x="5" y="94" width="310" height="310"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-vq-Rhj">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="310"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRP-G4-Ubw">
                                                 <rect key="frame" x="0.0" y="0.0" width="155" height="310"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +102,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-U0-NIC">
                                         <rect key="frame" x="147" y="521" width="27" height="27"/>
@@ -145,6 +149,7 @@
                         <outlet property="backgroundView" destination="ZES-L2-7Sk" id="aXH-Jk-Seb"/>
                         <outlet property="closeButton" destination="loZ-U0-NIC" id="kDt-C8-N4z"/>
                         <outlet property="frameForCapture" destination="Abf-i3-IIt" id="Y2q-vI-MDK"/>
+                        <outlet property="outputImage" destination="WYw-vq-Rhj" id="cCB-8s-3Hn"/>
                         <outlet property="switchImageType" destination="9sr-yb-ji2" id="5Rz-T0-IXW"/>
                     </connections>
                 </viewController>

@@ -30,15 +30,16 @@ AVCaptureStillImageOutput *stillImageOutput;
     
     AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error;
-    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice: inputDevice error: &error];
+    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
     
-    if([session canAddInput:deviceInput])
+    if([session canAddInput:deviceInput]){
         [session addInput:deviceInput];
+    }
     
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     
-    CALayer *rootLayer = [[self view] layer];
+    CALayer *rootLayer = [[self frameForCapture] layer];
     [rootLayer setMasksToBounds:YES];
     CGRect frame = self.frameForCapture.frame;
     
@@ -51,13 +52,12 @@ AVCaptureStillImageOutput *stillImageOutput;
     [stillImageOutput setOutputSettings:outputSettings];
     
     [session addOutput:stillImageOutput];
-    
+    NSLog(@"test");
     [session startRunning];
-    
     //Set camera type
     [self SAGAType];
     
-    [super viewWillAppear:animated];
+    //[super viewWillAppear:animated];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -155,6 +155,8 @@ AVCaptureStillImageOutput *stillImageOutput;
         if(imageDataSampleBuffer != NULL){
             NSData *imagedata = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
             UIImage *image = [UIImage imageWithData:imagedata];
+            //TODO: resize the image according to camera mode then send it to parse
+            self.outputImage.image = image;
         }
     }];
 }

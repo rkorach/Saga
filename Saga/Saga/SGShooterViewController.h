@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *SAImage;
 @property (strong, nonatomic) IBOutlet UILabel *GALabel;
 @property (strong, nonatomic) IBOutlet UISwitch *switchImageType;
+@property (strong, nonatomic) IBOutlet UIImageView *outputImage;
 
 @property (nonatomic, weak) UIView *backViewControllerView;
 @property (nonatomic) BOOL active;
