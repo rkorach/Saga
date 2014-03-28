@@ -146,13 +146,13 @@ AVCaptureStillImageOutput *stillImageOutput;
     
     [session addOutput:stillImageOutput];
     [session startRunning];
-    NSLog(@"startrunning");
     
 	// Do any additional setup after loading the view.
     self.closeButton.layer.cornerRadius = self.closeButton.bounds.size.width / 2.0;
 }
 
 - (void)viewDidUnload{
+    //Stop the camera video
     [session stopRunning];
     [super viewDidUnload];
 }
