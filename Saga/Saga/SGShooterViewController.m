@@ -24,40 +24,14 @@ AVCaptureStillImageOutput *stillImageOutput;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    //Get the back camera display on the screen where the frame is
-    session = [[AVCaptureSession alloc] init];
-    [session setSessionPreset:AVCaptureSessionPresetPhoto];
-    
-    AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    NSError *error;
-    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
-    
-    if([session canAddInput:deviceInput]){
-        [session addInput:deviceInput];
-    }
-    
-    AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
-    [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    
-    CALayer *rootLayer = [[self frameForCapture] layer];
-    [rootLayer setMasksToBounds:YES];
-    CGRect frame = self.frameForCapture.frame;
-    
-    [previewLayer setFrame:frame];
-    
-    [rootLayer insertSublayer:previewLayer atIndex:0];
-    
-    stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
-    NSDictionary *outputSettings = [NSDictionary dictionaryWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
-    [stillImageOutput setOutputSettings:outputSettings];
-    
-    [session addOutput:stillImageOutput];
-    NSLog(@"test");
-    [session startRunning];
     //Set camera type
     [self SAGAType];
     
-    //[super viewWillAppear:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -129,8 +103,45 @@ AVCaptureStillImageOutput *stillImageOutput;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Get the back camera display on the screen where the frame is
+    session = [[AVCaptureSession alloc] init];
+    [session setSessionPreset:AVCaptureSessionPresetPhoto];
+    
+    AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError *error;
+    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:&error];
+    
+    if([session canAddInput:deviceInput]){
+        [session addInput:deviceInput];
+    }
+    
+    AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
+    [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    
+    CALayer *rootLayer = [[self frameForCapture] layer];
+    [rootLayer setMasksToBounds:YES];
+    CGRect frame = self.frameForCapture.frame;
+    
+    [previewLayer setFrame:frame];
+    
+    [rootLayer insertSublayer:previewLayer atIndex:0];
+    
+    stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [NSDictionary dictionaryWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
+    [stillImageOutput setOutputSettings:outputSettings];
+    
+    [session addOutput:stillImageOutput];
+    [session startRunning];
+    NSLog(@"startrunning");
+    
 	// Do any additional setup after loading the view.
     self.closeButton.layer.cornerRadius = self.closeButton.bounds.size.width / 2.0;
+}
+
+- (void)viewDidUnload{
+    [session stopRunning];
+    [super viewDidUnload];
 }
 
 - (void)viewDidAppear:(BOOL)animated

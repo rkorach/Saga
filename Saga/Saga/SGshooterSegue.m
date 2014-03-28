@@ -15,7 +15,6 @@
     // overrides the UIStoryboardSegue superclass perform method.
     // triggered when the segue happens.
     
-    
     UIViewController *sourceVC = self.sourceViewController;
     SGShooterViewController *destinationVC = self.destinationViewController;
     // We set the destination VC as inactive because clicking a button
