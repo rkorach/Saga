@@ -428,10 +428,14 @@
                                     <segue destination="D1K-zp-dPG" kind="embed" id="3wi-TP-aDn"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-6Y-Pqk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-6Y-Pqk">
                                 <rect key="frame" x="112" y="452" width="96" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.23182122699999999" blue="0.24860856510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="DWO-Vg-wv6"/>
+                                    <constraint firstAttribute="height" constant="96" id="Iwk-lB-4cG"/>
+                                </constraints>
                                 <state key="normal">
                                     <color key="titleColor" red="0.98039215690000003" green="0.0" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -444,6 +448,7 @@
                         <color key="backgroundColor" red="0.87077487239999996" green="0.87077487239999996" blue="0.87077487239999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="leading" secondItem="Wz8-gK-FvN" secondAttribute="leading" id="5i6-Gr-cnJ"/>
+                            <constraint firstItem="BmK-6Y-Pqk" firstAttribute="centerX" secondItem="7Hc-wu-82g" secondAttribute="centerX" id="6uh-w3-cUF"/>
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="top" secondItem="Wz8-gK-FvN" secondAttribute="bottom" id="94e-cA-JQl"/>
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="top" secondItem="81V-rb-9Hz" secondAttribute="top" constant="60" id="Bzt-WI-V0c"/>
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="leading" secondItem="81V-rb-9Hz" secondAttribute="leading" id="EsF-0Z-fBj"/>
@@ -452,6 +457,7 @@
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="leading" secondItem="81V-rb-9Hz" secondAttribute="leading" id="gE6-3m-CqU"/>
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="trailing" secondItem="Wz8-gK-FvN" secondAttribute="trailing" id="kpQ-FV-Ppa"/>
                             <constraint firstAttribute="trailing" secondItem="7Hc-wu-82g" secondAttribute="trailing" id="rLT-KZ-ZTH"/>
+                            <constraint firstItem="BmK-6Y-Pqk" firstAttribute="top" secondItem="7Hc-wu-82g" secondAttribute="bottom" constant="-116" id="uox-w5-2pX"/>
                             <constraint firstAttribute="bottom" secondItem="7Hc-wu-82g" secondAttribute="bottom" id="vgb-YV-c7Z"/>
                             <constraint firstItem="7Hc-wu-82g" firstAttribute="top" secondItem="Wz8-gK-FvN" secondAttribute="bottom" id="z5j-tO-GyM"/>
                         </constraints>
@@ -514,7 +520,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-U0-NIC">
-                                        <rect key="frame" x="147" y="521" width="27" height="27"/>
+                                        <rect key="frame" x="20" y="13" width="27" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.090461575255102011" green="0.090461575255102011" blue="0.090461575255102011" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="close_takepicture">
@@ -525,10 +531,14 @@
                                             <action selector="touchEscapeShooterButton:" destination="d20-vp-ezT" eventType="touchUpInside" id="Pq4-xD-KbV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Si-eV-VU5">
-                                        <rect key="frame" x="137" y="452" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Si-eV-VU5">
+                                        <rect key="frame" x="137" y="489" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.97647064920000004" green="0.0" blue="0.22745099660000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EZS-ZV-ZCo"/>
+                                            <constraint firstAttribute="width" constant="46" id="Z9s-jH-tpa"/>
+                                        </constraints>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -553,9 +563,11 @@
                                 <color key="backgroundColor" red="0.011832703171114359" green="0.017967986619331633" blue="0.25452407525510201" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9sr-yb-ji2" secondAttribute="trailing" constant="137" id="41t-wa-pzl"/>
+                                    <constraint firstAttribute="centerX" secondItem="1Si-eV-VU5" secondAttribute="centerX" id="CWc-ua-For"/>
                                     <constraint firstAttribute="trailing" secondItem="Abf-i3-IIt" secondAttribute="trailing" id="RGq-Cy-pVD"/>
                                     <constraint firstItem="9sr-yb-ji2" firstAttribute="top" secondItem="ZES-L2-7Sk" secondAttribute="top" constant="11" id="fqg-9B-IMw"/>
                                     <constraint firstItem="Abf-i3-IIt" firstAttribute="top" secondItem="9sr-yb-ji2" secondAttribute="bottom" constant="11" id="gHj-Zg-vcZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Si-eV-VU5" secondAttribute="bottom" constant="49" id="jXw-xN-ge5"/>
                                     <constraint firstItem="9sr-yb-ji2" firstAttribute="leading" secondItem="ZES-L2-7Sk" secondAttribute="leading" constant="134" id="l71-HV-RZc"/>
                                     <constraint firstItem="Abf-i3-IIt" firstAttribute="leading" secondItem="ZES-L2-7Sk" secondAttribute="leading" id="p8a-ci-9bL"/>
                                 </constraints>
