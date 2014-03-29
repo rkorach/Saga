@@ -24,7 +24,7 @@
 {
     // lazy instanciation
     if (!_pageNames) {
-        _pageNames = @[@"Page1", @"Page2", @"Page3", @"FirstPhoto"];
+        _pageNames = @[@"Page1", @"Page2", @"Page3", @"Page4"];
     }
     return _pageNames;
 }
@@ -69,6 +69,10 @@
     return [self.storyboard instantiateViewControllerWithIdentifier:self.pageNames[index]];
 }
 
+- (IBAction)unwindToWalkthrough:(UIStoryboardSegue *)unwindSegue
+{
+}
+
 #pragma mark - Page View Controller Data Source
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
@@ -103,9 +107,4 @@
     return 0;
 }
 
-- (IBAction)touchSignupButton {
-}
-
-- (IBAction)touchLoginButton {
-}
-
+@end

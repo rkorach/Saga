@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694A8EC018E6F553009B6F80 /* SGPasswordReseterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694A8EBF18E6F553009B6F80 /* SGPasswordReseterViewController.m */; };
 		6976AA9B18E356170000D609 /* SGWalkthroughPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AA9A18E356170000D609 /* SGWalkthroughPageVC.m */; };
 		6976AA9E18E356DB0000D609 /* SGWalkthroughMasterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AA9D18E356DB0000D609 /* SGWalkthroughMasterVC.m */; };
 		6976AAA318E48AF40000D609 /* UIColor+SGColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AAA218E48AF40000D609 /* UIColor+SGColors.m */; };
 		6976AAA618E498B10000D609 /* CAGradientLayer+SGGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AAA518E498B10000D609 /* CAGradientLayer+SGGradientLayer.m */; };
+		6976AAB518E5C5090000D609 /* SGSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AAB418E5C5090000D609 /* SGSignUpViewController.m */; };
+		6976AABC18E605610000D609 /* SGLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6976AABB18E605610000D609 /* SGLogInViewController.m */; };
 		69B2C27D18DCA8FB0038DB55 /* SGFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C27C18DCA8FB0038DB55 /* SGFeedTableViewController.m */; };
 		69B2C28018DCA99F0038DB55 /* SGSagaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C27F18DCA99F0038DB55 /* SGSagaCell.m */; };
 		69B2C28318DCA9A90038DB55 /* SGSaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B2C28218DCA9A90038DB55 /* SGSaCell.m */; };
@@ -59,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		694A8EBE18E6F553009B6F80 /* SGPasswordReseterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPasswordReseterViewController.h; sourceTree = "<group>"; };
+		694A8EBF18E6F553009B6F80 /* SGPasswordReseterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPasswordReseterViewController.m; sourceTree = "<group>"; };
 		6976AA9918E356170000D609 /* SGWalkthroughPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWalkthroughPageVC.h; sourceTree = "<group>"; };
 		6976AA9A18E356170000D609 /* SGWalkthroughPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWalkthroughPageVC.m; sourceTree = "<group>"; };
 		6976AA9C18E356DB0000D609 /* SGWalkthroughMasterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWalkthroughMasterVC.h; sourceTree = "<group>"; };
@@ -67,6 +72,10 @@
 		6976AAA218E48AF40000D609 /* UIColor+SGColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SGColors.m"; sourceTree = "<group>"; };
 		6976AAA418E498B10000D609 /* CAGradientLayer+SGGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+SGGradientLayer.h"; sourceTree = "<group>"; };
 		6976AAA518E498B10000D609 /* CAGradientLayer+SGGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+SGGradientLayer.m"; sourceTree = "<group>"; };
+		6976AAB318E5C5080000D609 /* SGSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSignUpViewController.h; sourceTree = "<group>"; };
+		6976AAB418E5C5090000D609 /* SGSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSignUpViewController.m; sourceTree = "<group>"; };
+		6976AABA18E605610000D609 /* SGLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLogInViewController.h; sourceTree = "<group>"; };
+		6976AABB18E605610000D609 /* SGLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGLogInViewController.m; sourceTree = "<group>"; };
 		69B2C27B18DCA8FB0038DB55 /* SGFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFeedTableViewController.h; sourceTree = "<group>"; };
 		69B2C27C18DCA8FB0038DB55 /* SGFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFeedTableViewController.m; sourceTree = "<group>"; };
 		69B2C27E18DCA99F0038DB55 /* SGSagaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSagaCell.h; sourceTree = "<group>"; };
@@ -219,6 +228,19 @@
 			name = colors;
 			sourceTree = "<group>";
 		};
+		6976AAA718E4C8FD0000D609 /* signup */ = {
+			isa = PBXGroup;
+			children = (
+				6976AAB318E5C5080000D609 /* SGSignUpViewController.h */,
+				6976AAB418E5C5090000D609 /* SGSignUpViewController.m */,
+				6976AABA18E605610000D609 /* SGLogInViewController.h */,
+				6976AABB18E605610000D609 /* SGLogInViewController.m */,
+				694A8EBE18E6F553009B6F80 /* SGPasswordReseterViewController.h */,
+				694A8EBF18E6F553009B6F80 /* SGPasswordReseterViewController.m */,
+			);
+			name = signup;
+			sourceTree = "<group>";
+		};
 		69B2C29318E18C6E0038DB55 /* ECSlidingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +293,7 @@
 				6976AA9318E22B0E0000D609 /* profile */,
 				6976AA9418E22B240000D609 /* shooter */,
 				6976AA9818E355C50000D609 /* walkthrough */,
+				6976AAA718E4C8FD0000D609 /* signup */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -389,6 +412,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = cottonTracks;
 				TargetAttributes = {
+					F9A50DAF18C8BDBB00FD7CFE = {
+						DevelopmentTeam = VMWGLEBVZA;
+					};
 					F9A50DCA18C8BDBB00FD7CFE = {
 						TestTargetID = F9A50DAF18C8BDBB00FD7CFE;
 					};
@@ -438,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6976AA9B18E356170000D609 /* SGWalkthroughPageVC.m in Sources */,
+				694A8EC018E6F553009B6F80 /* SGPasswordReseterViewController.m in Sources */,
 				6976AAA618E498B10000D609 /* CAGradientLayer+SGGradientLayer.m in Sources */,
 				69B2C29918E18C6E0038DB55 /* UIImage+ImageWithUIView.m in Sources */,
 				69DB2BB218E1E18A00913048 /* initViewController.m in Sources */,
@@ -457,6 +484,8 @@
 				F934368418CC8B69003415AA /* SGFeedViewController.m in Sources */,
 				F9A50DC418C8BDBB00FD7CFE /* SGAppDelegate.m in Sources */,
 				69B2C28C18DDB1F10038DB55 /* SGshooterSegue.m in Sources */,
+				6976AAB518E5C5090000D609 /* SGSignUpViewController.m in Sources */,
+				6976AABC18E605610000D609 /* SGLogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +593,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/raphaelkorach/workspace/iOS/Saga,
@@ -574,6 +605,8 @@
 				GCC_PREFIX_HEADER = "Saga/Saga-Prefix.pch";
 				INFOPLIST_FILE = "Saga/Saga-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -583,6 +616,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/raphaelkorach/workspace/iOS/Saga,
@@ -593,6 +628,8 @@
 				GCC_PREFIX_HEADER = "Saga/Saga-Prefix.pch";
 				INFOPLIST_FILE = "Saga/Saga-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -44,9 +44,9 @@
     
     if (![PFUser currentUser]) {
         UIViewController *walkthroughVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WalkthroughMaster"];
+        walkthroughVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:walkthroughVC animated:NO completion:NULL];
     } else {
-        [PFUser logOut]; // log out, for coding purpose.
         
         /* Hamburger menu code */
         // we set the what we want to be the initial ViewController as the top viewController
