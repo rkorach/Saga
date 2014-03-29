@@ -208,8 +208,8 @@
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            // Hooray! Let them use the app now.
-            
+            // signup successful, go to feed
+            [self accessFeed]; 
         } else {
             NSString *errorString = [error userInfo][@"error"];
             // Show the errorString somewhere and let the user try again.
@@ -221,6 +221,13 @@
             [alert show];
         }
     }];
+}
+
+- (void)accessFeed
+{
+    // TODO(pink): release all the walkthrough, login, signup VCs and go back to the original initVC
+    UIViewController *initViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"init"];
+    [self presentViewController:initViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
