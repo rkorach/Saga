@@ -1,4 +1,6 @@
-
 *.xcbkptlist
 
 *.xcuserstate
+
+.DS_Store
+Saga/.DS_Store
