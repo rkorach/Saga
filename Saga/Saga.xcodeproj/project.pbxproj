@@ -346,9 +346,9 @@
 				69DB2BAA18E19B9D00913048 /* view */,
 				69DB2BAB18E19BAE00913048 /* appdelegate */,
 				69B2C29318E18C6E0038DB55 /* ECSlidingViewController */,
-				F9A50DC518C8BDBB00FD7CFE /* Images.xcassets */,
 				6976AAA018E48A3B0000D609 /* colors */,
 				F9A50DBA18C8BDBB00FD7CFE /* Supporting Files */,
+				F9A50DC518C8BDBB00FD7CFE /* Images.xcassets */,
 			);
 			path = Saga;
 			sourceTree = "<group>";
