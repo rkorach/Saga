@@ -174,12 +174,17 @@ AVCaptureStillImageOutput *stillImageOutput;
     [stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         if(imageDataSampleBuffer != NULL){
             NSData *imagedata = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
-            UIImage *image = [UIImage imageWithData:imagedata];
+            UIImage *image = [UIImage imageWithData:imagedata scale:2.0f];
+            
+            UIImage *SAGAimage = [self resizeImage:[self cropSquareImage:image] newSize:CGSizeMake(640.0f, 640.0f)];
             
             //Display the output image
-            self.outputImage.image = image;
+            self.outputImage.image = SAGAimage;
             
-            
+            if([[self switchImageType] isOn])
+                self.SAImage.image = [self cropSAGAImage:SAGAimage isSA:YES];
+            else
+                self.SAImage.image = [self cropSAGAImage:SAGAimage isSA:NO];
         }
     }];
 }
@@ -200,4 +205,80 @@ AVCaptureStillImageOutput *stillImageOutput;
         [[self SAImage] setHidden: true];
     }
 }
+
+- (UIImage *)cropSquareImage:(UIImage *)original{
+    UIImage *newImage = nil;
+    
+    // This calculates the crop area.
+    
+    float newWidth  = original.size.width * original.scale;
+    float newHeight = original.size.width * original.scale;
+    
+    float posX = (original.size.height * original.scale - newHeight) * 0.5f;
+    float posY = (original.size.width * original.scale - newWidth) * 0.5f;
+    CGRect cropSquare = CGRectMake(posX, posY, newWidth, newHeight);
+    
+    // This performs the image cropping.
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([original CGImage], cropSquare);
+    
+    newImage = [UIImage imageWithCGImage:imageRef scale:original.scale orientation:original.imageOrientation];
+    
+    CGImageRelease(imageRef);
+    
+    return newImage;
+}
+
+- (UIImage *)cropSAGAImage:(UIImage *)original isSA:(BOOL)isSa{
+    UIImage *newImage = nil;
+    
+    NSLog(@"%f %f", original.size.width, original.size.height);
+    // This calculates the crop area.
+    
+    float newWidth  = original.size.width * original.scale;
+    float newHeight = original.size.height * original.scale * 0.5f;
+    
+    float posY = 0.0f;
+    float posX = 0.0f;
+    if (!isSa)
+        posY = (original.size.height * original.scale) * 0.5f;
+    
+    CGRect cropSquare = CGRectMake(posX, posY, newWidth, newHeight);
+    
+    // This performs the image cropping.
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([original CGImage], cropSquare);
+    
+    newImage = [UIImage imageWithCGImage:imageRef scale:original.scale orientation:original.imageOrientation];
+    
+    CGImageRelease(imageRef);
+    
+    return newImage;
+}
+
+- (UIImage *)resizeImage:(UIImage *)image newSize:(CGSize)newSize {
+    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height));
+    CGImageRef imageRef = image.CGImage;
+    
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // Set the quality level to use when rescaling
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, newSize.height);
+    
+    CGContextConcatCTM(context, flipVertical);
+    // Draw into the context; this scales the image
+    CGContextDrawImage(context, newRect, imageRef);
+    
+    // Get the resized image from the context and a UIImage
+    CGImageRef newImageRef = CGBitmapContextCreateImage(context);
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef scale:image.scale orientation:image.imageOrientation];
+    
+    CGImageRelease(newImageRef);
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
 @end
