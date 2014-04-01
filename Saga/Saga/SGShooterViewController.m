@@ -190,7 +190,7 @@ AVCaptureStillImageOutput *stillImageOutput;
             NSData *imagedata = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
             UIImage *image = [UIImage imageWithData:imagedata];
             
-            UIImage *SAGAimage = [self resizeImage:[self cropSquareImage:image] newSize:CGSizeMake(640.0f, 640.0f)];
+            UIImage *SAGAimage = [self resizeImage:[self cropSquareImage:image] newSize:CGSizeMake(320.0f, 320.0f)];
             
             //Display the output image
             self.outputImage.image = SAGAimage;
@@ -300,7 +300,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     NSString *fileType;
     
     if (image != nil) {
-        fileData = UIImageJPEGRepresentation(image, 1.0f);
+        fileData = UIImageJPEGRepresentation(image, 0.5f);
         fileName = @"image.jpeg";
         if(sa)
             fileType = @"SA";
