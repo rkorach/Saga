@@ -10,6 +10,7 @@
 #import "ECSlidingViewController/ECSlidingViewController.h"
 #import "UIImage+ImageWithUIView.h"
 #import <AVFoundation/AVFoundation.h>
+#import <Parse/Parse.h>
 
 @interface SGShooterViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
@@ -195,9 +196,10 @@ AVCaptureStillImageOutput *stillImageOutput;
             self.outputImage.image = SAGAimage;
             
             if([[self switchImageType] isOn])
-                self.SAImage.image = [self cropSAGAImage:SAGAimage isSA:YES];
+                [self uploadImage:[self cropSAGAImage:SAGAimage isSA:NO] isSA:NO];
             else
-                self.SAImage.image = [self cropSAGAImage:SAGAimage isSA:NO];        }
+                [self uploadImage:[self cropSAGAImage:SAGAimage isSA:YES] isSA:YES];
+        }
     }];
 }
 
@@ -251,7 +253,7 @@ AVCaptureStillImageOutput *stillImageOutput;
     
     float posY = 0.0f;
     float posX = 0.0f;
-    if (!isSa)
+    if (isSa)
         posY = (original.size.height * original.scale) * 0.5f;
     
     CGRect cropSquare = CGRectMake(posX, posY, newWidth, newHeight);
@@ -290,6 +292,53 @@ AVCaptureStillImageOutput *stillImageOutput;
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
+- (void)uploadImage:(UIImage *)image isSA:(BOOL)sa{
+    NSData *fileData;
+    NSString *fileName;
+    NSString *fileType;
+    
+    if (image != nil) {
+        fileData = UIImageJPEGRepresentation(image, 1.0f);
+        fileName = @"image.jpeg";
+        if(sa)
+            fileType = @"SA";
+        else
+            fileType = @"GA";
+    }
+    
+    PFFile *file = [PFFile fileWithName:fileName data:fileData];
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred!"
+                                                                message:@"Please try sending your message again."
+                                                               delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+        }
+        else {
+            PFObject *photo = [PFObject objectWithClassName:@"Photo"];
+            [photo setObject:file forKey:@"imageFile"];
+            [photo setObject:fileType forKey:@"type"];
+            [photo setObject:[PFUser currentUser] forKey:@"owner"];
+            [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (error) {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred!"
+                                                                        message:@"Please try sending your message again."
+                                                                       delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alertView show];
+                }
+                else {
+                    // Everything was successful!
+                    [self reset];
+                }
+            }];
+        }
+    }];
+}
+
+- (void)reset{
+    
 }
 
 @end
